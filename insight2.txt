@@ -1,0 +1,1 @@
+There is a correlation of -0.45 between mileage and price (higher mileage usually reduces price)
