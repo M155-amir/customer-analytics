@@ -52,5 +52,4 @@ if engine_cols:
         f.write(f"The most common engine type is {top_engine.replace('Engine Type_', '')}")
 
 print("Analytics completed successfully!")
-os.system("python visualize.py data_preprocessed.csv")
 
