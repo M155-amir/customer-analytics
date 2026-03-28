@@ -15,18 +15,6 @@ print(df.head())
 df.drop('Model', axis=1, inplace=True)
 print(df.head())
 
-import pandas as pd
-
-df = pd.read_csv("Car_sales.csv")
-
-df.replace("NA", pd.NA, inplace=True)
-
-df = df.apply(lambda x: x.fillna(x.mean()) if x.dtype != "object" else x.fillna(x.mode()[0]))
-
-df["Brand"] = df["Brand"].str.replace(r"-NA", "", regex=True).str.strip()
-
-df.drop_duplicates(inplace=True)
-print(df.head())
 
 import pandas as pd
 
@@ -37,7 +25,7 @@ for col in df.columns:
         df[col] = df[col].fillna(df[col].mean())
     else:
         df[col] = df[col].fillna(df[col].mode()[0])
-        
+
 df["Brand"] = df["Brand"].str.replace(r"-NA", "", regex=True).str.strip()
 df.drop_duplicates(inplace=True)
 
